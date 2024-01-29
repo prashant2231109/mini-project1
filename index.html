@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food website </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/assets/pic1.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+
+<a href="#" class="logo"><i class="fas fa-utensils"></i><span class="kakana">K</span>akana <span class="blast">B</span>last.</a>
+<nav class="navbar">
+    <a class="active" href="#home">home</a>
+    <a href="#dishes">dishes</a>
+    <a href="#about">about</a>
+    <a href="#menu">menu</a>
+    <a href="#review">review</a>
+    <a href="#order">order</a>
+</nav>
+<div class="icons">
+<i class="fas fa-bars" id="menu-bars"></i>
+<i class="fas fa-search" id="search-icon"></i>
+<a href="#" class="fas fa-heart"></a>
+<i class="fas fa-shopping-cart" id="cart-icon"></i>
+<span id="cart-quantity">0</span>
+</div>
+
+    </header>
+
+
+ <div id="cart-container" class="cart-container">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+    </div>
+
+
+    <!-- search form -->
+    <form action="" id="search-form">
+  <input type="search" placeholder="search here..." name="" id="search-box">
+  <label for="search-box" class="fas fa-search"></label>
+  <i class="fas fa-times" id="close"></i>
+
+    </form>
+    <!-- home section start -->
+    <section class="home" id="home">
+    <div class=" swiper home-slider">
+
+    <div class="swiper-wrapper wrapper">
+        
+        
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>spicy noodle</h3>
+            <p>Spicy noodles are one of the best ways to prepare ramen.
+                 From chili oil to sambal to hot peppers, <br>there are so many ways to add heat to a dish.</p>
+            <a href="#" class="btn"> order now</a>   
+            </div>
+            <div class="image">
+                <img class="image-cont" src="/assets/pop1.jpg" alt="">
+            </div> 
+
+        </div>
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>special pizza</h3>
+            <p>Pizza is a dish of Italian origin consisting of a usually round, flat base of
+                 leavened wheat-based dough topped with tomatoes, cheese, and often various ...</p>
+            <a href="#" class="btn">order now</a>   
+            </div>
+            <div class="image">
+                <img  class="image-cont" src="/assets/pizza.jpg" alt="">
+            </div> 
+
+        </div>
+
+        <div class="swiper-slide slide">
+            <div class="content">
+            <span>our special dish</span>
+            <h3>Bean Burger</h3>
+            <p>These bean burgers are dairy, egg, and gluten-free, don’t require any complicated steps, are perfect for making ahead, and will
+                 make both the meat-eaters and non-meat eaters in your life happy!</p>
+            <a href="#" class="btn">order now</a>   
+            </div>
+            <div class="image">
+                <img  class="image-cont" src="/assets/bub.jpg" alt="">
+            </div> 
+
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+
+
+    </div>
+
+</section>
+<!-- home section complete-->
+
+
+
+<!-- dishes section start  -->
+<section class="dishes" id="dishes">
+
+<h3 class="sub-heading"> our dishes</h3>
+<h1 class="heading"> popular dishes</h1>
+<div class="box-container">
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/french.jpg" alt="">
+    <h3>french fries</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 270</span>
+    
+    <button onclick="addToCart('french fries', 270)">Add to Cart</button>
+    
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/cake.jpg" alt="">
+    <h3>Butter cake</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 140</span>
+    <button onclick="addToCart('butter cake', 140)">Add to Cart</button>
+    
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/pasta.jpg" alt="">
+    <h3>pasta</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 299</span>
+    <button onclick="addToCart('pasta', 299)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/soup.jpg" alt="">
+    <h3>mushroom soup</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 169</span>
+    <button onclick="addToCart('mushroom soup', 169)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/pass.jpg" alt="">
+    <h3>Mount Nemrut.</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 205</span>
+    <button onclick="addToCart('Mount Nemrut', 205)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/pra.jpg" alt="">
+    <h3>veg roll</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 119</span>
+    <button onclick="addToCart('veg roll', 119)">Add to Cart</button>
+    
+
+  </div>
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/rice.jpg" alt="">
+    <h3>soyabean rice</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 150</span>
+    <button onclick="addToCart('soyabean rice', 150)">Add to Cart</button>
+    
+
+  </div>
+
+  <div class="box">
+
+    <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-eye"></a>
+    <img src="/assets/pizza.jpg" alt="">
+    <h3>Pepperoni Pizza</h3>
+    <div class="stars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+
+    </div>
+    <span>&#8377 250</span>
+    <button onclick="addToCart('Pepperoni Pizza', 250)">Add to Cart</button>
+    
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- about section start -->
+<section class="about" id="about">
+
+  <h3 class="sub-heading"> about us</h3>
+  <h1 class="heading"> why choose us? </h1>
+
+  <div class="row">
+
+<div class="image">
+  <img src="/assets/about.jpg" alt="">
+</div>
+
+<div class="content">
+<h3> best food and service in the country</h3>
+<p>
+  Customers use our platform to search and discover restaurants, read and write customer generated reviews
+   and view and upload photos, order food delivery, book a table and make payments while dining-out at restaurants.
+    On the other hand, we provide restaurant partners with industry-specific marketing tools which enable them 
+  to engage and acquire customers to grow their business while also providing a reliable and efficient last mile delivery service. 
+</p>
+<p>
+  Location is one of the most critical aspects that drives customer experience through Search & Discovery and Online Ordering
+   on Zomato. Starting from the different restaurants to be showcased on the app,
+   to delivering orders at the accurate location, it plays a big role in determining how customer-friendly our platform really is.
+</p>
+<div class="icons-container">
+<div class="icons">
+<i class="fas fa-shipping-fast"></i>
+<span>free delivery</span>
+
+</div>
+<div class="icons">
+  <i class="fas fa-rupee-sign"></i>
+  <span>easy payment</span>
+  
+  </div>
+  <div class="icons">
+    <i class="fas fa-headset"></i>
+    <span>24/7 services</span>
+    
+    </div>
+
+</div>
+<a href="#" class="btn">learn more</a>
+
+
+
+</div>
+
+  </div>
+</section>
+<!-- about section ends -->
+
+
+<!-- menu section starts -->
+<section class="menu" id="menu">
+
+  <h3 class="sub-heading"> our menu</h3>
+  <h1 class="heading"> today's speciality </h1>
+
+<div class="box-container">
+
+<div class="box">
+  <div class="image">
+    <img src="/assets/meat.jpg" alt="">
+    <a href="#" class="fas fa-heart"></a>
+  </div>
+  <div class="content">
+
+    <div class="stars">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+    </div>
+    <h3>dahi arbi</h3>
+    <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+       on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+    </p>
+  <button onclick="addToCart('dahi arbi', 349)">Add to Cart</button>
+    <span class="price">&#8377 349</span>
+  </div>
+  </div>
+  <div class="box">
+    <div class="image">
+      <img src="/assets/p1.jpg" alt="">
+      <a href="#" class="fas fa-heart"></a>
+    </div>
+    <div class="content">
+  
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star-half-alt"></i>
+      </div>
+      <h3>panner tikka masala</h3>
+      <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+         on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+      </p>
+      <button onclick="addToCart('panner tikka masala', 349)">Add to Cart</button>
+            <span class="price">&#8377 149</span>
+    </div>
+    </div>
+    <div class="box">
+      <div class="image">
+        <img src="/assets/p2.jpg" alt="">
+        <a href="#" class="fas fa-heart"></a>
+      </div>
+      <div class="content">
+    
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <h3>Turkey chicken roast</h3>
+        <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+           on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+        </p>
+        <button onclick="addToCart('Turkey chicken roast', 349)">Add to Cart</button>
+        <span class="price">&#8377 150</span>
+      </div>
+      </div>
+      <div class="box">
+        <div class="image">
+          <img src="/assets/p3.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+      
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>saag panner</h3>
+          <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+             on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+          </p>
+          <button onclick="addToCart('saag panner', 200)">Add to Cart</button>
+          <span class="price">&#8377 200</span>
+        </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="/assets/p4.jpg" alt="">
+            <a href="#" class="fas fa-heart"></a>
+          </div>
+          <div class="content">
+        
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <h3>North special thali</h3>
+            <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+               on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+            </p>
+            <button onclick="addToCart('North special thali', 300)">Add to Cart</button>
+            <span class="price">&#8377 300</span>
+          </div>
+          </div>
+          <div class="box">
+            <div class="image">
+              <img src="/assets/p5.jpg" alt="">
+              <a href="#" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+          
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <h3>Caesar Salad</h3>
+              <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                 on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+              </p>
+              <button onclick="addToCart('Caesar Salad', 350)">Add to Cart</button>
+              <span class="price">&#8377 350</span>
+            </div>
+            </div>
+            <div class="box">
+              <div class="image">
+                <img src="/assets/p6.jpg" alt="">
+                <a href="#" class="fas fa-heart"></a>
+              </div>
+              <div class="content">
+            
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>chicken rice</h3>
+                <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                   on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                </p>
+                <button onclick="addToCart('chicken rice', 500)">Add to Cart</button>
+                <span class="price">&#8377 500</span>
+              </div>
+              </div>
+              <div class="box">
+                <div class="image">
+                  <img src="/assets/p7.jpg" alt="">
+                  <a href="#" class="fas fa-heart"></a>
+                </div>
+                <div class="content">
+              
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <h3>Coleslaw</h3>
+                  <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                     on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                  </p>
+                  <button onclick="addToCart('Coleslaw', 200)">Add to Cart</button>
+                  <span class="price">&#8377 200</span>
+                </div>
+                </div>
+                <!-- <div class="image">
+                  <div class="image">
+                    <img src="/assets/p8.jpg" alt="">
+                    <a href="#" class="fas fa-heart"></a>
+                  </div>
+                  <div class="content">
+                
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <h3>delicious food</h3>
+                    <p>Known for its incredible marbling and tender texture, Wagyu beef is considered one of the most delicious meats
+                       on Earth. It is often used in high-end restaurants and is prized for its unique flavor.
+                    </p>
+                    <a href="#" class="btn">add to cart</a>
+                    <span class="price">&#8377 349</span>
+                  </div> -->
+                  
+
+</div>
+
+</div>
+
+</section>
+
+<!-- review section start -->
+<section class="review" id="review">
+  <h3 class="sub-heading"> customer's review</h3>
+  <h1 class="heading"> what they say </h1>
+  <div class=" swiper review-slider">
+  <div class="swiper-wrapper">
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="/assets/pppp.jpg" alt="">
+        <div class="user-info">
+          <h3>Prashant</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="/assets/pics1.jpg" alt="">
+        <div class="user-info">
+          <h3>Pushkar</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="/assets/pics2.jpg" alt="">
+        <div class="user-info">
+          <h3>Rishu</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+
+    <div class=" swiper-slide slide">
+      <i class="fas fa-quote-right"></i>
+
+      <div class="user">
+        <img src="/assets/pics3.jpg" alt="">
+        <div class="user-info">
+          <h3>Ayush</h3>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+        </div>
+      </div>
+      <p>I and my friend had dinner here one of the nights we were in Kalpetta. The ambiance was good and the food recommendations
+         were great. We had a traditional Arabian rice and chicken preparation, Kuzhi Manthi. It was our first experience having this 
+         dish, and although a bit dry, it tasted great. Would recommend this place that's easily noticed from a vehicle and has ample parking.
+
+        </p>
+    </div>
+  </div>
+
+  </div>
+
+
+
+
+</section>
+
+<!-- order section start -->
+
+
+<section class="order" id="order">
+
+  <h3 class="sub-heading"> order now</h3>
+  <h1 class="heading"> free and fast</h1>
+  <form action="">
+
+<div class="inputBox">
+
+<div class="input">
+  <span>Your name</span>
+  <input type="text" placeholder="Enter your name">
+</div>
+
+<div class="input">
+  <span>Your order</span>
+  <input type="number" placeholder="Enter your number">
+</div>
+
+<div class="inputBox">
+<div class="input">
+  <span>Your food</span>
+  <input type="number" placeholder="Enter food name">
+</div>
+<div class="input">
+  <span>additional food</span>
+  <input type="test" placeholder="Extra with food">
+</div>
+</div>
+<div class="inputBox">
+
+  <div class="input">
+    <span>how much</span>
+    <input type="number" placeholder="how many order">
+  </div>
+  
+  <div class="input">
+    <span>date and time</span>
+    <input type="datetime-local" >
+  </div>
+  </div>
+
+  <div class="inputBox">
+
+    <div class="input">
+      <span>Your address</span>
+      <textarea name=""  placeholder="enter your address" id="" cols="30" rows="10">
+      </textarea>
+    </div>
+    
+    <div class="input">
+      <span> your number</span>
+      <textarea name=""  placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+    </div>
+    </div> 
+
+    <input type="summit" value="order now" class="btn">
+
+
+  </form>
+
+
+
+</section>
+
+<!-- footer section start -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+
+    <div class="box">
+
+      <h3>location</h3>
+      <a href="#">India</a>
+      <a href="#">japan</a>
+      <a href="#">russia</a>
+      <a href="#">USA</a>
+      <a href="#">Italy</a>
+    </div>
+    <div class="box">
+
+      <h3>quick links</h3>
+      <a href="#">home</a>
+      <a href="#">dishes</a>
+      <a href="#">about</a>
+      <a href="#">menu</a>
+      <a href="#">review</a>
+      <a href="#">order</a>
+    </div>
+    <div class="box">
+
+      <h3>contact info</h3>
+      <a href="#">+914568792456</a>
+      <a href="#">+111-789-4569</a>
+      <a href="#">Rishurajput124@gmail.com</a>
+      <a href="#">Prashantsaw999@gmail.com</a>
+      <a href="#">ranchi, india - 834004</a>
+    </div>
+    <div class="box">
+
+      <h3>follow us</h3>
+      <a href="#">instagram</a>
+      <a href="#">twitter</a>
+      <a href="#">linkedin</a>
+     
+    </div>
+
+
+  </div>
+  <div class="credit">copyright @ 2024 by <span>mr. prashant kumar</span></div>
+</section>
+
+
+
+<!-- loader part -->
+<!-- <div class="loader-container">
+  <img src="/assets/gift.gif" alt="">
+</div> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
